@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expressing Love to My Sweetest Boyfriend</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+
+  <style>
+    /* CSS styles */
+
+    .container {
+      position: relative;
+      background-color: #FFC0CB; /* Set the background color */
+      overflow: hidden; /* Hide overflowing elements */
+    }
+
+    /* Create the floating heart animation */
+    @keyframes floating-hearts {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      10%, 90% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+    }
+
+    /* Style the heart pseudo-elements */
+    .container::before,
+    .container::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      /* background-color: #FF69B4; Set the heart color */
+      border-radius: 50%;
+      z-index: 1;
+      pointer-events: none; /* Make the hearts non-interactable */
+      animation: floating-hearts 8s linear infinite;
+    }
+
+    .container::before {
+        top: -100px;
+      left: 10%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF69B4'%3E%3Cpath d='M12 20c-1.3 0-2.6-.5-3.5-1.4C7.5 17.3 7 16.1 7 15c0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.1-.5 2.3-1.5 3.2C14.6 19.5 13.3 20 12 20zm0-18C6.5 2 2 6.5 2 12c0 5.5 4.5 10 10 10s10-4.5 10-10C22 6.5 17.5 2 12 2zm0 18c1.7 0 3.4-.6 4.7-1.8l.1-.1c1.3-1.2 2.2-2.8 2.2-4.6 0-1.7-1-3.4-2.7-4.4C15.4 5.8 13.7 5 12 5S8.6 5.8 7.5 6.1c-1.7 1-2.7 2.7-2.7 4.4 0 1.8.9 3.4 2.2 4.6.7.7 1.7 1.1 2.8 1.1zm0-16C7.6 2 3 6.6 3 12c0 5.4 4.5 10 9 10 5.4 0 10-4.6 10-10 0-5.4-4.6-10-10-10zm0 18c-4.4 0-8-3.6-8-8 0-4.4 3.6-8 8-8 4.4 0 8 3.6 8 8 0 4.4-3.6 8-8 8zm-1-11h-2v5h2v-5zm0 7h-2v2h2v-2z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+      /* animation: floating-hearts 6s ease-in-out infinite; */
+    }
+
+    .container::after {
+        top: -200px;
+      right: 10%;
+      animation-delay: 4s; /* Delay the start of the second heart */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF69B4'%3E%3Cpath d='M12 20c-1.3 0-2.6-.5-3.5-1.4C7.5 17.3 7 16.1 7 15c0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.1-.5 2.3-1.5 3.2C14.6 19.5 13.3 20 12 20zm0-18C6.5 2 2 6.5 2 12c0 5.5 4.5 10 10 10s10-4.5 10-10C22 6.5 17.5 2 12 2zm0 18c1.7 0 3.4-.6 4.7-1.8l.1-.1c1.3-1.2 2.2-2.8 2.2-4.6 0-1.7-1-3.4-2.7-4.4C15.4 5.8 13.7 5 12 5S8.6 5.8 7.5 6.1c-1.7 1-2.7 2.7-2.7 4.4 0 1.8.9 3.4 2.2 4.6.7.7 1.7 1.1 2.8 1.1zm0-16C7.6 2 3 6.6 3 12c0 5.4 4.5 10 9 10 5.4 0 10-4.6 10-10 0-5.4-4.6-10-10-10zm0 18c-4.4 0-8-3.6-8-8 0-4.4 3.6-8 8-8 4.4 0 8 3.6 8 8 0 4.4-3.6 8-8 8zm-1-11h-2v5h2v-5zm0 7h-2v2h2v-2z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain; /* Delay the animation start */
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    header {
+      background: linear-gradient( #FFC0CB, #FF69B4);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+    color: hsl(342, 66%, 44%); /* Change the color to your desired color (e.g., red) */
+    color: hsl(340, 50%, 41%); font-family: "Great Vibes", cursive; text-shadow: 0 1px 1px #fff;
+  }
+
+
+    nav {
+      background-color: hsl(342, 58%, 49%);
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      color: #fff;
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+    .left-image,
+  .right-image {
+    position: absolute;
+    width: 150px; /* Adjust the width as needed */
+    top: 50%; /* Adjust the vertical position as needed */
+    transform: translateY(-50%); /* Vertically center the images */
+  }
+
+  .left-image {
+    left: -150px; /* Adjust the horizontal position as needed */
+  }
+
+  .right-image {
+    right: -150px; /* Adjust the horizontal position as needed */
+  }
+
+    main {
+      padding: 20px;
+      
+    }
+
+    #home {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px; /* Adjust the max-width as needed */
+  }
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Photo Gallery Styles */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .photo-item {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .photo-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .photo-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .photo-item:hover .photo-overlay {
+      opacity: 1;
+    }
+
+    .photo-overlay h3 {
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+    
+   <div class = "container">   
+  <header>
+    <h1 >Expressing Love to My Sweetest Bambuda</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#gallery">Photo Gallery</a></li>
+      <li><a href="#timeline">Love Story Timeline</a></li>
+      <li><a href="#letters">Love Letters</a></li>
+      <li><a href="#messages">Messages</a></li>
+      <li><a href="#games">Games</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <img class="left-image" src="images\memes-love-iforher-my-brain-247.jpg" alt="Left Image">
+      <h2>Welcome to Our Love Website</h2>
+      <p>I created this website as a special place to express my love for you and celebrate our beautiful journey together. It's a testament to the incredible bond we share and the happiness you bring into my life.</p>
+    <p>Here, you'll find a collection of our cherished memories, heartfelt letters, and a glimpse into our love story. This website serves as a reminder of how lucky I am to have you by my side.</p>
+    <p>As you explore the different sections, immerse yourself in the photo gallery capturing our happiest moments, read the love letters that hold my deepest emotions, and enjoy the games and interactive elements designed just for us.</p>
+    <p>Thank you for being the most amazing boyfriend and for filling my life with endless love, joy, and laughter. This website is my way of expressing my love and gratitude for you.</p>
+    <img class="right-image" src="images\i want you.jpg" alt="Right Image">
+    </section>
+
+    <section id="gallery">
+        <h2>Memory Lane</h2>
+        <div class="photo-gallery">
+          <div class="photo-item">
+            <img src="images\WhatsApp Image 2023-07-11 at 13.23.52 (1).jpeg" alt="Photo 1">
+            <div class="photo-overlay">
+              <h3>The Day when it all started</h3>
+            </div>
+          </div>
+          <div class="photo-item">
+            <img src="images\WhatsApp Image 2023-07-11 at 13.36.25.jpeg" alt="Photo 3">
+            <div class="photo-overlay">
+              <h3>Falling in love a lil bit more everyday</h3>
+            </div>
+          </div>
+          <div class="photo-item">
+            <img src="images\WhatsApp Image 2023-07-11 at 13.23.52.jpeg" alt="Photo 2">
+            <div class="photo-overlay">
+              <h3>And look where we have reached now</h3>
+            </div>
+          </div>
+          <!-- Add more photo items as needed -->
+        </div>
+    </section>
+
+    <section id="timeline">
+      <h2>Love Story Timeline</h2>
+      <!-- Add your love story timeline content here -->
+    </section>
+
+    <section id="letters">
+      <h2>Love Letters</h2>
+      <!-- Add your love letters or poems content here -->
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <!-- Add your messages or guestbook content here -->
+    </section>
+
+    <section id="games">
+      <h2>Games</h2>
+      <!-- Add your interactive games or quizzes content here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Till Infinity. All love reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code for interactivity (example: smooth scrolling)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  </div>
+</body>
+</html>
